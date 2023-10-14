@@ -1,0 +1,149 @@
+/* App.css */
+.containers {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 128, 0, 0.488),
+    rgba(0, 229, 255, 0.438)
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-box {
+  width: 400px;
+  height: 600px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  position: absolute;
+  /* background-color: black; */
+  overflow: hidden;
+}
+
+/* Historybox styles */
+.historybox {
+  height: 50%;
+
+  position: relative;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+.dark-mode-historybox {
+  background-color: rgba(4, 8, 86, 0.779);
+  color: white;
+}
+
+.light-mode-historybox {
+  background-color: #eee;
+}
+
+/* Toggle button styles */
+.toggle_button {
+  width: 50px;
+  border: none;
+  background-color: rgba(0, 255, 255, 0.345);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.137);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.toggle_button_circle {
+  border-radius: 50%;
+  height: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Calculator body styles */
+.calculator_body {
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: teal;
+  overflow: hidden;
+  transition: all;
+}
+/* Dark mode button style */
+.dark .calculator_body_left_button,
+.dark .calculator_body_right_button {
+  background-color: rgba(2, 4, 45, 0.785);
+  color: white;
+}
+
+/* Light mode button style */
+.light .calculator_body_left_button,
+.light .calculator_body_right_button {
+  background-color: white;
+  color: black;
+}
+
+.calculator_body_left {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calculator_body_right {
+  width: 100px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.calculator_body_right_button,
+.calculator_body_left_button {
+  padding: 1rem;
+  font-size: 18px;
+  text-align: center;
+  background-color: white;
+  border: none;
+}
+
+.calculator_body_left_button:hover,
+.calculator_body_right_button:hover {
+  background-color: red;
+}
+
+.expression-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-items: flex-start;
+
+  padding: 10px;
+  font-size: 24px;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.expression {
+  margin-bottom: 5px;
+}
+
+.result .history-item {
+  font-size: 12px;
+  padding: 1rem;
+}
+
+.history-item {
+  padding: 4px 8px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-item .expression,
+.history-item .result {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expression-result .expression,
+.expression-result .result {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
